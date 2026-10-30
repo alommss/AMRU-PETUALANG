@@ -1,12 +1,11 @@
-// Service worker sederhana (cache-first). Naikkan VERSION tiap rilis supaya cache ter-update.
 const VERSION = 'v1';
 const CACHE = 'amru-' + VERSION;
 const FILES = [
-  './', './index.html', './manifest.json', './css/style.css',
-  './js/main.js', './js/state.js', './js/config.js', './js/dialog.js', './js/audio.js',
-  './js/player.js', './js/npc.js', './js/gfx.js', './js/character.js', './js/world.js',
-  './js/scene.js', './js/game.js', './js/input.js',
-  './icons/icon-192.png', './icons/icon-512.png'
+  './', './index.html', './manifest.json', './style.css',
+  './main.js', './state.js', './config.js', './dialog.js', './audio.js',
+  './player.js', './npc.js', './gfx.js', './character.js', './world.js',
+  './scene.js', './game.js', './input.js',
+  './icon-192.png', './icon-512.png'
 ];
 
 self.addEventListener('install', e => {
