@@ -1,0 +1,12 @@
+html,body{position:fixed;inset:0;margin:0;overflow:hidden;background:#0e1424;font-family:system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+#L{position:fixed;left:calc(24px + env(safe-area-inset-left));bottom:calc(18px + env(safe-area-inset-bottom));display:flex;gap:36px}
+#bj{position:fixed;right:calc(28px + env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom))}
+button{touch-action:none;width:74px;height:74px;border-radius:50%;border:2px solid rgba(255,255,255,.4);background:rgba(110,110,110,.3);color:rgba(255,255,255,.75);font-size:28px;font-weight:700;-webkit-tap-highlight-color:transparent}
+button:active{background:rgba(255,255,255,.35)}
+#rot{display:none;position:fixed;inset:0;z-index:10;background:#0e1424;color:#fff;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px}
+#rot .ic{font-size:88px;animation:tilt 2.2s ease-in-out infinite}
+#rot b{font-size:28px}
+#rot span{font-size:16px;opacity:.7}
+@keyframes tilt{0%,25%{transform:rotate(0)}65%,100%{transform:rotate(-90deg)}}
+@media (orientation:portrait){#rot{display:flex}#L,#bj{display:none}}
