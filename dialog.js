@@ -13,8 +13,8 @@ export const SCENES = {
     { who: 'Amru', t: 'pass bgtt kramss' },
     { who: 'Amru', t: 'temenin gw yoo' },
     { who: 'Ikram', t: 'kemana bonss?' },
-    { who: 'Amru', t: 'gw ketemuan ama cewe di sukabumi' },
-    { who: 'Ikram', t: 'ogah kntl' },
+    { who: 'Amru', t: 'gw mau ketemuan ama cewe di sukabumi' },
+    { who: 'Ikram', t: 'ogah kntl,sndiri aj sno' },
     { who: 'Amru', t: 'huft..' },
     { who: 'Amru', t: 'oke deh krams' }
   ]
