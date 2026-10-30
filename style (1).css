@@ -1,0 +1,27 @@
+html,body{position:fixed;inset:0;margin:0;overflow:hidden;background:#0e1424;font-family:system-ui,sans-serif;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+#L{position:fixed;left:calc(24px + env(safe-area-inset-left));bottom:calc(18px + env(safe-area-inset-bottom));display:flex;gap:36px}
+#bj{position:fixed;right:calc(28px + env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom))}
+button{touch-action:none;width:74px;height:74px;border-radius:50%;border:2px solid rgba(255,255,255,.4);background:rgba(110,110,110,.3);color:rgba(255,255,255,.75);font-size:28px;font-weight:700;-webkit-tap-highlight-color:transparent}
+button:active{background:rgba(255,255,255,.35)}
+#rot{display:none;position:fixed;inset:0;z-index:10;background:#0e1424;color:#fff;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px}
+#rot .ic{font-size:88px;animation:tilt 2.2s ease-in-out infinite}
+#rot b{font-size:28px}
+#rot span{font-size:16px;opacity:.7}
+@keyframes tilt{0%,25%{transform:rotate(0)}65%,100%{transform:rotate(-90deg)}}
+@media (orientation:portrait){#rot{display:flex}#L,#bj{display:none}}
+
+/* ===== Home screen ===== */
+#home{position:fixed;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3vh;background:radial-gradient(ellipse at center,rgba(10,15,35,.35),rgba(10,15,35,.82));transition:opacity .45s ease;font-family:'Pirata One',Georgia,serif;text-align:center}
+body:not([data-mode="home"]) #home{opacity:0;pointer-events:none}
+#home h1{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.9;font-weight:400}
+#home h1::after{content:"";order:3;width:min(44vh,44vw);height:2px;margin-top:2vh;background:linear-gradient(90deg,transparent,#ffd23f,transparent)}
+.t1{font-size:min(26vh,16vw);letter-spacing:.06em;background:linear-gradient(#fff3b0,#ffc42e 55%,#d9822b);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 .04em 0 #5a2f0a) drop-shadow(0 .08em .12em rgba(0,0,0,.6))}
+.t2{font-size:min(13vh,9vw);letter-spacing:.32em;margin-right:-.32em;color:#fff;text-shadow:0 .06em 0 #0b1020,0 0 .4em rgba(0,0,0,.6)}
+#play{width:auto;height:auto;min-width:min(34vh,40vw);padding:1.4vh 5vh;border-radius:999px;border:3px solid #5a2f0a;background:linear-gradient(#ffd23f,#e8962a);color:#3a1d05;font:inherit;font-size:min(8vh,6vw);letter-spacing:.12em;cursor:pointer;box-shadow:0 .5vh 0 #7a4210,0 1.4vh 3vh rgba(0,0,0,.5);animation:pulse 1.6s ease-in-out infinite}
+#play:active{animation:none;transform:translateY(.4vh);box-shadow:0 .1vh 0 #7a4210;background:linear-gradient(#ffe27a,#f0a53a)}
+@keyframes pulse{50%{transform:scale(1.05)}}
+
+/* tombol kontrol disembunyikan saat home & intro */
+body[data-mode="home"] #L,body[data-mode="home"] #bj,
+body[data-mode="intro"] #L,body[data-mode="intro"] #bj{display:none}
